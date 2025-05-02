@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
         <div className={styles.infoContainer}>
           <h1 className={styles.name}>Rodrigo Bonilla</h1>
-          <p className={styles.title}>Desarrollador Web</p>
+          <p className={styles.title}>Desarrollador web</p>
           <p className={styles.description}>
           Soy desarrollador web apasionado, con experiencia en la creación de sitios web dinámicos y responsivos. Domino HTML, CSS, SASS, JavaScript, Angular, React, Node.js y SQL Server.
           Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Busco un entorno de trabajo colaborativo donde pueda contribuir y crecer profesionalmente.

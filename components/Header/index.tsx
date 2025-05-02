@@ -37,7 +37,7 @@ const Header = () => {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <span>Portfolio</span>
+          <span>Portafolio</span>
         </Link>
 
         <button 
@@ -51,7 +51,7 @@ const Header = () => {
         <nav className={`${styles.nav} ${isMenuOpen ? styles.active : ''}`}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="#about" onClick={closeMenu}>Sobre Mi</Link>
+              <Link href="#about" onClick={closeMenu}>Sobre Mí</Link>
             </li>
             <li className={styles.navItem}>
               <Link href="#projects" onClick={closeMenu}>Proyectos</Link>
@@ -60,7 +60,7 @@ const Header = () => {
               <Link href="#experience" onClick={closeMenu}>Experiencia</Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="#education" onClick={closeMenu}>Formacion</Link>
+              <Link href="#education" onClick={closeMenu}>Formación</Link>
             </li>
             <li className={styles.navItem}>
               <Link href="#contact" onClick={closeMenu}>Contacto</Link>

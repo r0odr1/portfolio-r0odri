@@ -5,18 +5,17 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <div className="container">
-        <h2 className="section-title">Sobre Mi</h2>
+        <h2 className="section-title">Sobre Mí</h2>
         
         <div className={styles.content}>
           <div className={styles.bio}>
             <p>
             Me apasiona crear aplicaciones web intuitivas y responsivas. Disfruto transformando ideas en experiencias digitales interactivas y fáciles de usar.
-            Constantemente amplío mis conocimientos en desarrollo front-end y back-end, con el objetivo de mantenerme al día con las últimas tendencias del sector.
+            Constantemente amplío mis conocimientos en desarrollo front-end y back-end, para estar al día con las tendencias del sector.
             </p>
             <p>
-            Actualmente, me centro en mejorar mis habilidades en desarrollo web mediante proyectos prácticos, explorando nuevos frameworks y profundizando en el diseño responsivo
-            y los principios del código limpio. Creo en el poder del trabajo en equipo y la comunicación efectiva, y siempre busco oportunidades para colaborar con otros y resolver
-            problemas complejos.
+            Actualmente, me enfoco en mejorar mis habilidades mediante proyectos prácticos, explorando nuevos frameworks y profundizando en el diseño responsivo
+            y código limpio. Valoro el trabajo en equipo y la comunicación efectiva, y siempre busco colaborar para resolver desafíos complejos.
             </p>
           </div>
           
@@ -57,6 +56,8 @@ const About = () => {
           <div className={styles.technologies}>
             <h3>Tecnologías con las que trabajo:</h3>
             <div className={styles.techList}>
+
+              {/* Lenguajes */}
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
                 <span>HTML5</span>
@@ -70,24 +71,22 @@ const About = () => {
                 <span>JavaScript</span>
               </div>
               <div className={styles.tech}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-                <span>React</span>
-              </div>
-              <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
                 <span>TypeScript</span>
               </div>
               <div className={styles.tech}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
-                <span>Next.js</span>
-              </div>
-              <div className={styles.tech}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-                <span>Node.js</span>
-              </div>
-              <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
                 <span>Python</span>
+              </div>
+
+              {/* Frameworks y Librerías */}
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+                <span>React</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" />
+                <span>Next.js</span>
               </div>
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt='Angular'/>
@@ -106,20 +105,26 @@ const About = () => {
                 <span>Strapi</span>
               </div>
               <div className={styles.tech}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt='Git'/>
-                <span>Git</span>
-              </div>
-              <div className={styles.tech}>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt='GitHub'/>
-                <span>GitHub</span>
-              </div>
-              <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt='Sass'/>
                 <span>Sass</span>
               </div>
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gulp/gulp-plain.svg" alt='Gulp'/>
                 <span>Gulp</span>
+              </div>
+
+              {/* Herramientas y Plataformas */}
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                <span>Node.js</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt='Git'/>
+                <span>Git</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt='GitHub'/>
+                <span>GitHub</span>
               </div>
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karma/karma-original.svg" alt='Karma'/>
