@@ -5,15 +5,18 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <div className="container">
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title">Sobre Mi</h2>
         
         <div className={styles.content}>
           <div className={styles.bio}>
             <p>
-              I'm passionate about building intuitive and responsive web applications. I enjoy transforming ideas into interactive, user-friendly digital experiences. I am constantly expanding my knowledge in front-end and back-end development, aiming to stay up-to-date with the latest industry trends.
+            Me apasiona crear aplicaciones web intuitivas y responsivas. Disfruto transformando ideas en experiencias digitales interactivas y fáciles de usar.
+            Constantemente amplío mis conocimientos en desarrollo front-end y back-end, con el objetivo de mantenerme al día con las últimas tendencias del sector.
             </p>
             <p>
-              Currently, I am focused on enhancing my skills in web development through hands-on projects, exploring new frameworks, and diving deeper into responsive design and clean code principles. I believe in the power of teamwork and effective communication, and I am always looking for opportunities to collaborate with others and solve complex problems.
+            Actualmente, me centro en mejorar mis habilidades en desarrollo web mediante proyectos prácticos, explorando nuevos frameworks y profundizando en el diseño responsivo
+            y los principios del código limpio. Creo en el poder del trabajo en equipo y la comunicación efectiva, y siempre busco oportunidades para colaborar con otros y resolver
+            problemas complejos.
             </p>
           </div>
           
@@ -23,7 +26,7 @@ const About = () => {
                 <Monitor size={24} />
               </div>
               <h3>Front-end Development</h3>
-              <p>Creating responsive and interactive user interfaces with modern frameworks.</p>
+              <p>Creación de interfaces de usuario interactivas y receptivas con marcos modernos.</p>
             </div>
             
             <div className={styles.skillCard}>
@@ -31,7 +34,7 @@ const About = () => {
                 <Code size={24} />
               </div>
               <h3>Back-end Development</h3>
-              <p>Building robust server-side applications and RESTful APIs.</p>
+              <p>Creación de aplicaciones robustas del lado del servidor y API RESTful.</p>
             </div>
             
             <div className={styles.skillCard}>
@@ -39,7 +42,7 @@ const About = () => {
                 <Users size={24} />
               </div>
               <h3>Collaboration</h3>
-              <p>Working effectively in teams using version control and agile methodologies.</p>
+              <p>Trabajar eficazmente en equipo, utilizando control de versiones y metodologías ágiles.</p>
             </div>
             
             <div className={styles.skillCard}>
@@ -47,12 +50,12 @@ const About = () => {
                 <Zap size={24} />
               </div>
               <h3>Performance Optimization</h3>
-              <p>Enhancing application speed and efficiency for better user experience.</p>
+              <p>Mejorar la velocidad y la eficiencia de las aplicaciones para una mejor experiencia del usuario.</p>
             </div>
           </div>
           
           <div className={styles.technologies}>
-            <h3>Technologies I work with:</h3>
+            <h3>Tecnologías con las que trabajo:</h3>
             <div className={styles.techList}>
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
@@ -85,6 +88,54 @@ const About = () => {
               <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
                 <span>Python</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" alt='Angular'/>
+                <span>Angular</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg" alt='Angular Material'/>
+                <span>Angular Material</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-plain.svg" alt='.Net'/>
+                <span>.Net</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="/assets/images/strapi.png" alt="Strapi" />
+                <span>Strapi</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt='Git'/>
+                <span>Git</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt='GitHub'/>
+                <span>GitHub</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt='Sass'/>
+                <span>Sass</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gulp/gulp-plain.svg" alt='Gulp'/>
+                <span>Gulp</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karma/karma-original.svg" alt='Karma'/>
+                <span>Karma</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original.svg" alt='Bitbucket'/>
+                <span>Bitbucket</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt='Jira'/>
+                <span>Jira</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="/assets/images/stripe.svg" alt="Stripe" />
+                <span>Stripe</span>
               </div>
             </div>
           </div>
