@@ -1,0 +1,115 @@
+.about {
+  padding: var(--spacing-16) 0;
+  background-color: var(--background-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.bio {
+  max-width: 800px;
+}
+
+.bio p {
+  margin-bottom: var(--spacing-4);
+  line-height: 1.8;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-6);
+}
+
+.skillCard {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skillIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 204, 0, 0.1);
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-4);
+}
+
+.skillCard h3 {
+  margin-bottom: var(--spacing-2);
+  font-size: var(--font-size-lg);
+}
+
+.skillCard p {
+  color: var(--text-color-muted);
+  margin-bottom: 0;
+}
+
+.technologies {
+  margin-top: var(--spacing-8);
+}
+
+.technologies h3 {
+  margin-bottom: var(--spacing-6);
+  font-size: var(--font-size-lg);
+}
+
+.techList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-6);
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius);
+  background-color: var(--card-background);
+  transition: transform 0.3s ease;
+}
+
+.tech:hover {
+  transform: translateY(-3px);
+}
+
+.tech img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 640px) {
+  .techList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .techList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
