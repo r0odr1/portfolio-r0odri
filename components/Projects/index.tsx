@@ -38,12 +38,23 @@ const projectsData = [
   {
     id: 4,
     title: 'Festival de musica',
-    description: 'An application that allows users to search for recipes based on ingredients they have.',
+    description: 'Festival de Música es una aplicación web que muestra información sobre festivales y artistas destacados. Su diseño atractivo y navegación simple facilitan la exploración del contenido musical. \n\nEl sitio cuenta con diseño responsive, lo que asegura una experiencia fluida y consistente en móviles, tabletas y computadoras.',
     image: '/assets/images/festivalmusica.png',
-    tags: ['Html', 'Sass', 'JavaScript', 'Axios'],
+    tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
       live: 'https://musics-festivals.netlify.app',
     },
+  },
+  {
+    id: 5,
+    title: 'Bienes Raices',
+    description: 'Inmuebles XYZ es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
+    image: '/assets/images/bienesraices.png',
+    tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
+    links: {
+      live: '',
+    },
+    status: 'En Curso',
   },
 ];
 
@@ -52,8 +63,8 @@ const Projects = () => {
   
   const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js'];
   
-  const filteredProjects = filter === 'All' 
-    ? projectsData 
+  const filteredProjects = filter === 'All'
+    ? projectsData
     : projectsData.filter(project => project.tags.includes(filter));
 
   return (
@@ -77,6 +88,9 @@ const Projects = () => {
           {filteredProjects.map(project => (
             <div key={project.id} className={styles.projectCard}>
               <div className={styles.projectImage}>
+                {project.status && (
+                  <span className={styles.projectLabel}>{project.status}</span>
+                )}
                 <img src={project.image} alt={project.title} />
               </div>
               <div className={styles.projectContent}>
@@ -88,10 +102,17 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className={styles.links}>
-                  <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={20} />
-                    <span>Demo</span>
-                  </a>
+                  {project.links.live ? (
+                    <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={20} />
+                      <span>Demo</span>
+                    </a>
+                  ) : (
+                    <span className={`${styles.disabledLink}`}>
+                      <ExternalLink size={20} />
+                      <span>Demo</span>
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
