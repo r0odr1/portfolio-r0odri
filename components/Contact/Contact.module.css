@@ -1,0 +1,263 @@
+.contact {
+  padding: var(--spacing-16) 0;
+  background-color: var(--background-color);
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.contactInfo {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-md);
+}
+
+.contactInfo h3 {
+  color: var(--text-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-4);
+  position: relative;
+  display: inline-block;
+}
+
+.contactInfo h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.contactInfo p {
+  color: var(--text-color-muted);
+  margin-bottom: var(--spacing-6);
+  max-width: 500px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.contactItem {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.contactIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 204, 0, 0.1);
+  color: var(--accent-color);
+}
+
+.contactItem h4 {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-base);
+}
+
+.contactItem a,
+.contactItem p {
+  color: var(--text-color-muted);
+  margin-bottom: 0;
+  font-size: var(--font-size-sm);
+  transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+  color: var(--accent-color);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color-dark);
+  transform: translateY(-3px);
+}
+
+.contactForm {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-md);
+}
+
+.contactForm h3 {
+  color: var(--text-color);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-6);
+  position: relative;
+  display: inline-block;
+}
+
+.contactForm h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6); /* Separar la etiqueta del resto del formulario */
+}
+
+/* Etiqueta de estado */
+.formStatus {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-4); /* Espacio entre la etiqueta y el título */
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* Coloca el tooltip arriba del texto */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  font-size: var(--font-size-sm);
+  line-height: 1.5; /* Ajusta el espacio entre líneas */
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  white-space: normal; /* Permite que el texto se ajuste automáticamente a múltiples líneas */
+  width: 250px; /* Ancho fijo para el tooltip */
+  /* text-align: justify; Alinea el texto para que se vea limpio */
+  z-index: 10; /* Asegura que se muestre encima de otros elementos */
+}
+
+.formStatus:hover .tooltip {
+  display: block; /* Muestra el tooltip al pasar el cursor */
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-6);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--text-color-muted);
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--accent-color);
+  color: var(--text-color-dark);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.formSuccess {
+  padding: var(--spacing-4);
+  background-color: rgba(39, 174, 96, 0.1);
+  border-left: 4px solid #27ae60;
+  color: #27ae60;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-6);
+}
+
+.formError {
+  padding: var(--spacing-4);
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 4px solid #e74c3c;
+  color: #e74c3c;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .contactContent {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .contactInfo,
+  .contactForm {
+    flex: 1;
+  }
+}
