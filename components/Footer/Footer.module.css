@@ -1,0 +1,51 @@
+.footer {
+  background-color: var(--primary-color);
+  padding: var(--spacing-8) 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  text-align: center;
+}
+
+.copyright {
+  color: var(--text-color-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.made {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-color-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.heart {
+  color: #e74c3c;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
