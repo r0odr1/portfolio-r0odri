@@ -1,0 +1,122 @@
+.projects {
+  padding: var(--spacing-16) 0;
+  background-color: var(--primary-color);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-8);
+}
+
+.filterButton {
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.filterButton.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--text-color-dark);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-8);
+}
+
+.projectCard {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projectImage {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImage img {
+  transform: scale(1.1);
+}
+
+.projectContent {
+  padding: var(--spacing-6);
+}
+
+.projectContent h3 {
+  margin-bottom: var(--spacing-2);
+  font-size: var(--font-size-lg);
+  color: var(--text-color);
+}
+
+.projectContent p {
+  color: var(--text-color-muted);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-base);
+  white-space: pre-line;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-4);
+}
+
+.links {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+
+@media (min-width: 640px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

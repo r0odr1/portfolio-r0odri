@@ -112,6 +112,10 @@ const About = () => {
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gulp/gulp-plain.svg" alt='Gulp'/>
                 <span>Gulp</span>
               </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" />
+                <span>Prisma</span>
+              </div>
 
               {/* Herramientas y Plataformas */}
               <div className={styles.tech}>
@@ -141,6 +145,20 @@ const About = () => {
               <div className={styles.tech}>
                 <img src="/assets/images/stripe.svg" alt="Stripe" />
                 <span>Stripe</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt='Postman'/>
+                <span>Postman</span>
+              </div>
+
+              {/* Bases de Datos */}
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" />
+                <span>SQL Server</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                <span>PostgreSQL</span>
               </div>
             </div>
           </div>
