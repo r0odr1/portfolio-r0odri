@@ -1,4 +1,4 @@
-import { Heart } from 'lucide-react';
+import { Flame } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
           </p>
           
           <p className={styles.made}>
-            Made with <Heart size={16} className={styles.heart} /> using React & Next.js
+            Hecho con <Flame size={16} className={styles.icon} /> usando React & Next.js
           </p>
         </div>
       </div>
