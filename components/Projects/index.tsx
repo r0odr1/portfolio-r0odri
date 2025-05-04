@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: 'RicaApp',
-    description: 'Es una app web, enfocada en servicios de restaurante para pedir comida online y poder hacer reservas en el restaurante, siempre y cuando estén registrados en la aplicación. \n\nSe ofrece una buena experiencia de usuario visual y fluida. Cabe resaltar que tiene vista responsive, quiere decir que se puede abrir en cualquier dispositivo sin perder consistencia.',
+    description: 'Es una app web, enfocada en servicios de restaurante, para pedir comida en línea y realizar reservas en el restaurante, siempre y cuando estén registrados en la aplicación. \n\nSe ofrece una buena experiencia de usuario visual y fluida. Cabe resaltar que tiene diseño responsive, lo que significa que puede abrirse en cualquier dispositivo sin perder consistencia.',
     image: '/assets/images/ricaapp.png',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Express', 'TypeScript'],
     links: {
@@ -17,8 +17,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: 'Blog Cafe',
-    description: 'Café Bloog es un blog dedicado al mundo del café, con contenido sobre variedades, preparación y curiosidades. Su diseño visual atractivo facilita la lectura y la navegación. \n\nOfrece una experiencia de usuario fluida y cuenta con diseño responsive, lo que permite acceder desde cualquier dispositivo sin perder calidad ni funcionalidad.',
+    title: 'Blog Café',
+    description: 'Blog Café es un blog dedicado al mundo del café, con contenido sobre variedades, preparación y curiosidades. Su diseño visual atractivo facilita la lectura y la navegación. \n\nOfrece una experiencia de usuario fluida y cuenta con diseño responsive, lo que permite acceder desde cualquier dispositivo sin perder calidad ni funcionalidad.',
     image: '/assets/images/blogcafe.png',
     tags: ['Html', 'Css', 'JavaScript'],
     links: {
@@ -37,7 +37,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: 'Festival de musica',
+    title: 'Festival de Música',
     description: 'Festival de Música es una aplicación web que muestra información sobre festivales y artistas destacados. Su diseño atractivo y navegación simple facilitan la exploración del contenido musical. \n\nEl sitio cuenta con diseño responsive, lo que asegura una experiencia fluida y consistente en móviles, tabletas y computadoras.',
     image: '/assets/images/festivalmusica.png',
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
@@ -47,8 +47,8 @@ const projectsData = [
   },
   {
     id: 5,
-    title: 'Bienes Raices',
-    description: 'Inmuebles XYZ es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
+    title: 'Bienes Raíces',
+    description: 'Bienes Raíces es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
     image: '/assets/images/bienesraices.png',
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
