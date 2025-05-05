@@ -149,3 +149,26 @@
     height: 220px;
   }
 }
+
+@media (max-width: 767px) {
+  .hero {
+    height: auto; /* Evita forzar 100vh en pantallas pequeñas */
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-12); /* espacio para scrollDown */
+  }
+
+  .profileContainer {
+    margin-top: var(--spacing-16); /* Nueva línea */
+  }
+
+  .scrollDown {
+    position: relative; /* Cambia de absolute a relative para no superponer */
+    margin-top: var(--spacing-12);
+    animation: none; /* opcional, puede evitar que se desplace */
+  }
+
+  .profileImageWrapper {
+    width: 140px;
+    height: 140px;
+  }
+}
