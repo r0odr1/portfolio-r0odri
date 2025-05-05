@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
@@ -8,6 +8,8 @@ import styles from './Header.module.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const [theme, setTheme] = useState<'theme-dark' | 'theme-light'>('theme-light');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +19,13 @@ const Header = () => {
         setScrolled(false);
       }
     };
+
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'theme-dark' : 'theme-light');
+
+    setTheme(initialTheme as 'theme-dark' | 'theme-light');
+    document.documentElement.classList.add(initialTheme);
 
     window.addEventListener('scroll', handleScroll);
     
@@ -33,6 +42,14 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const toggleTheme = () => {
+    const newTheme = theme === 'theme-dark' ? 'theme-light' : 'theme-dark';
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
@@ -40,8 +57,8 @@ const Header = () => {
           <span>Portafolio</span>
         </Link>
 
-        <button 
-          className={styles.menuButton} 
+        <button
+          className={styles.menuButton}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -64,6 +81,14 @@ const Header = () => {
             </li>
             <li className={styles.navItem}>
               <Link href="#contact" onClick={closeMenu}>Contacto</Link>
+            </li>
+            <li className={styles.navItem}>
+              <button
+                onClick={toggleTheme}
+                className={styles.themeToggleButton}
+                aria-label="Toggle theme">
+                {theme === 'theme-dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
             </li>
           </ul>
         </nav>
