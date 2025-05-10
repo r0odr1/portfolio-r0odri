@@ -58,7 +58,7 @@ const Header = () => {
         </Link>
 
         <button
-          className={styles.menuButton}
+          className={`${styles.menuButton} ${isMenuOpen ? styles.menuButtonActive : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
