@@ -80,8 +80,6 @@
   background: none;
   border: none;
   color: var(--text-color);
-  z-index: 110;
-  transition: color 0.3s ease;
 }
 
 .menuButton:hover {
@@ -89,7 +87,9 @@
 }
 
 .menuButtonActive {
-  color: #1e1e2b; /* Color oscuro para la "X" cuando el menú está abierto */
+  color: var(
+    --text-color
+  ); /* Color oscuro para la "X" cuando el menú está abierto */
 }
 
 .themeToggleButton {
@@ -116,8 +116,6 @@
 
   .nav {
     position: fixed;
-    --text-color: #1e1e2b;
-    color: #1e1e2b;
     top: 0;
     right: 0;
     height: 100vh;
