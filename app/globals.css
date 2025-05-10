@@ -46,6 +46,13 @@
   --border-color: #dddddd;
 }
 
+.theme-light header {
+  background-color: #13131a;
+  color: #ffffff;
+  --text-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
