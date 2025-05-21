@@ -1,7 +1,8 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import DropdownMenuPortal from './DropdownMenuPortal';
 import styles from './Projects.module.css';
 
 const projectsData = [
@@ -13,6 +14,10 @@ const projectsData = [
     tags: ['React', 'Node.js', 'PostgreSQL', 'Express', 'TypeScript'],
     links: {
       live: 'https://front-app-restaurant.vercel.app',
+      repos: [
+        { name: 'Repositorio del Front', url: 'https://github.com/jesusdavid24/front-app-restaurant' },
+        { name: 'Repositorio del Back', url: 'https://github.com/Cristianjs93/back-app-restaurant' },
+      ]
     },
   },
   {
@@ -23,6 +28,9 @@ const projectsData = [
     tags: ['Html', 'Css', 'JavaScript'],
     links: {
       live: 'https://cafebloog.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog'}
+      ]
     },
   },
   {
@@ -33,6 +41,9 @@ const projectsData = [
     tags: ['Html', 'Css', 'JavaScript'],
     links: {
       live: 'https://fro-store.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog',}
+      ],
     },
   },
   {
@@ -43,6 +54,9 @@ const projectsData = [
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
       live: 'https://musics-festivals.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/FestivalMusica'},
+      ]
     },
   },
   {
@@ -53,6 +67,9 @@ const projectsData = [
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
       live: '',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/bienes-raices'},
+      ]
     },
     status: 'En Curso',
   },
@@ -60,12 +77,33 @@ const projectsData = [
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
+  const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
+  const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
   
   const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js'];
   
   const filteredProjects = filter === 'All'
     ? projectsData
     : projectsData.filter(project => project.tags.includes(filter));
+
+
+  const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
+  const ignoreCloseRef = useRef(false);
+
+  const handleDropdownToggle = (id: number, event?: React.MouseEvent) => {
+    if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+    if (openDropdownId === id) {
+      setOpenDropdownId(null);
+      setAnchorRect(null);
+    } else {
+      const btn = buttonRefs.current[id];
+      setOpenDropdownId(id);
+      setAnchorRect(btn ? btn.getBoundingClientRect() : null);
+    }
+  };
 
   return (
     <section id="projects" className={styles.projects}>
@@ -113,6 +151,40 @@ const Projects = () => {
                       <span>Demo</span>
                     </span>
                   )}
+                  {project.links.repos?.length === 1 ? (
+                    <a href={project.links.repos[0].url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={20} />
+                      <span>Repositorio</span>
+                    </a>
+                  ) : project.links.repos?.length > 1 ? (
+                    <>
+                      <button
+                        ref={el => {
+                          (buttonRefs.current[project.id] = el)
+                        }}
+                        className={styles.dropdownButton}
+                        onMouseDown={(e) => handleDropdownToggle(project.id, e)}
+                      >
+                        <ExternalLink size={20} />
+                        <span>Repositorios</span>
+                      </button>
+                      <DropdownMenuPortal
+                        open={openDropdownId === project.id}
+                        anchorRect={anchorRect}
+                        onClose={() => setOpenDropdownId(null)}
+                      >
+                        <ul className={styles.dropdownMenu}>
+                          {project.links.repos.map((repo, index) => (
+                            <li key={index}>
+                              <a href={repo.url} target="_blank" rel="noopener noreferrer">
+                                {repo.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </DropdownMenuPortal>
+                    </>
+                  ) : null}
                 </div>
               </div>
             </div>
