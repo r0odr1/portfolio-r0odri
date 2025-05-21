@@ -13,6 +13,10 @@ const projectsData = [
     tags: ['React', 'Node.js', 'PostgreSQL', 'Express', 'TypeScript'],
     links: {
       live: 'https://front-app-restaurant.vercel.app',
+      repos: [
+        { name: 'Repositorio del Front', url: 'https://github.com/jesusdavid24/front-app-restaurant' },
+        { name: 'Repositorio del Back', url: 'https://github.com/jesusdavid24/front-app-restaurant' },
+      ]
     },
   },
   {
@@ -23,6 +27,9 @@ const projectsData = [
     tags: ['Html', 'Css', 'JavaScript'],
     links: {
       live: 'https://cafebloog.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog'}
+      ]
     },
   },
   {
@@ -33,6 +40,9 @@ const projectsData = [
     tags: ['Html', 'Css', 'JavaScript'],
     links: {
       live: 'https://fro-store.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog',}
+      ],
     },
   },
   {
@@ -43,6 +53,9 @@ const projectsData = [
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
       live: 'https://musics-festivals.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/FestivalMusica'},
+      ]
     },
   },
   {
@@ -53,6 +66,9 @@ const projectsData = [
     tags: ['Html', 'Sass (con mixins)', 'JavaScript', 'Gulp'],
     links: {
       live: '',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/bienes-raices'},
+      ]
     },
     status: 'En Curso',
   },
@@ -66,6 +82,8 @@ const Projects = () => {
   const filteredProjects = filter === 'All'
     ? projectsData
     : projectsData.filter(project => project.tags.includes(filter));
+
+  const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
 
   return (
     <section id="projects" className={styles.projects}>
@@ -113,6 +131,33 @@ const Projects = () => {
                       <span>Demo</span>
                     </span>
                   )}
+                  {project.links.repos?.length === 1 ? (
+                    <a href={project.links.repos[0].url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={20} />
+                      <span>Repositorio</span>
+                    </a>
+                  ) : project.links.repos?.length > 1 ? (
+                    <div className={styles.dropdown}>
+                      <button
+                        className={styles.dropdownButton}
+                        onClick={() => setOpenDropdownId(openDropdownId === project.id ? null : project.id)}
+                      >
+                        <ExternalLink size={20} />
+                        <span>Repositorios</span>
+                      </button>
+                      {openDropdownId === project.id && (
+                        <ul className={styles.dropdownMenu}>
+                          {project.links.repos.map((repo, index) => (
+                            <li key={index}>
+                              <a href={repo.url} target="_blank" rel="noopener noreferrer">
+                                {repo.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
