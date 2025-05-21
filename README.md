@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Rodrigo Bonilla - Web Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio. I'm Rodrigo Bonilla, a web developer passionate about creating efficient and visually appealing digital solutions. This website showcases my journey, skills, and notable projects in web development.
 
-First, run the development server:
+## 🚀 Technologies & Tools
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Languages: HTML5, CSS3, SASS, JavaScript, TypeScript, Python
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Frameworks & Libraries: React, Next.js, Angular, Angular Material, .NET
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Back-end & Databases: Node.js, Express, Strapi, Prisma, SQL Server, PostgreSQL
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Tools & Others: Git, GitHub, Bitbucket, Jira, Postman, Gulp, Karma, Stripe
 
-## Learn More
+## 🧩 Featured Projects
 
-To learn more about Next.js, take a look at the following resources:
+### RicaApp
+A web application for restaurants that allows users to place online orders and make reservations. Developed with React, Node.js, PostgreSQL, and TypeScript, it offers a seamless user experience and responsive design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Blog Café
+A blog dedicated to the world of coffee, featuring content on varieties, preparation methods, and curiosities. Implemented with HTML, CSS, and JavaScript, boasting an attractive and adaptive design.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend Store
+An online store providing a modern and accessible shopping experience. Built with HTML, CSS, and JavaScript, and optimized for mobile devices.
 
-## Deploy on Vercel
+### Festival de Música
+A web application showcasing information about music festivals and featured artists. Developed with HTML, SASS, JavaScript, and Gulp, focusing on responsive design.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Real Estate Platform
+An upcoming platform for buying, selling, and renting properties, offering a wide variety of listings and photographs. Coming soon.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📫 Contact
+
+Interested in collaborating or have any questions? Feel free to reach out:
+
+📧 rhbon.08@gmail.com
+
+🌐 [Portafolio](https://portfolio-r0odri.vercel.app)
