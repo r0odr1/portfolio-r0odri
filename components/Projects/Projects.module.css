@@ -152,6 +152,10 @@
   gap: 0.3rem;
 }
 
+.dropdownButton:hover {
+  color: var(--accent-color);
+}
+
 /* Estilos del menú desplegable renderizado por el portal */
 .dropdownMenu {
   background: var(--primary-color);
