@@ -2,7 +2,6 @@
   padding: var(--spacing-16) 0;
   background-color: var(--primary-color);
   position: relative; /* importante si hay hijos con posición absoluta */
-  z-index: 0; /* establece una jerarquía básica */
   overflow: visible;
 }
 
@@ -42,12 +41,12 @@
 }
 
 .projectCard {
+  position: relative;
   background-color: var(--card-background);
   border-radius: var(--border-radius);
   overflow: visible;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
 .projectCard:hover {
@@ -99,7 +98,6 @@
   border-radius: 4px;
   font-size: var(--font-size-sm);
   font-weight: bold;
-  z-index: 2;
 }
 
 .tags {
@@ -138,7 +136,6 @@
 
 .dropdown {
   position: relative;
-  z-index: 1000;
 }
 
 .dropdown a:hover {
@@ -155,32 +152,39 @@
   gap: 0.3rem;
 }
 
+/* Estilos del menú desplegable renderizado por el portal */
 .dropdownMenu {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: 0.5rem;
-  margin-top: 0;
   background: var(--primary-color);
   color: var(--text-color);
+  font-size: var(--font-size-sm);
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.5rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1100;
   min-width: 200px;
+  margin-top: 0.25rem;
 }
 
 .dropdownMenu li {
   list-style: none;
   padding: 0.5rem 1rem;
-  z-index: 1100;
 }
 
 .dropdownMenu a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  transition: color 0.3s ease, background-color 0.3s;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+}
+
+.dropdownMenu a:hover {
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 @media (min-width: 640px) {

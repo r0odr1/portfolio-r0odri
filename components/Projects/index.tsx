@@ -1,7 +1,8 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import DropdownMenuPortal from './DropdownMenuPortal';
 import styles from './Projects.module.css';
 
 const projectsData = [
@@ -76,6 +77,8 @@ const projectsData = [
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
+  const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
+  const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
   
   const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js'];
   
@@ -83,7 +86,24 @@ const Projects = () => {
     ? projectsData
     : projectsData.filter(project => project.tags.includes(filter));
 
-  const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
+
+  const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
+  const ignoreCloseRef = useRef(false);
+
+  const handleDropdownToggle = (id: number, event?: React.MouseEvent) => {
+    if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+    if (openDropdownId === id) {
+      setOpenDropdownId(null);
+      setAnchorRect(null);
+    } else {
+      const btn = buttonRefs.current[id];
+      setOpenDropdownId(id);
+      setAnchorRect(btn ? btn.getBoundingClientRect() : null);
+    }
+  };
 
   return (
     <section id="projects" className={styles.projects}>
@@ -137,15 +157,22 @@ const Projects = () => {
                       <span>Repositorio</span>
                     </a>
                   ) : project.links.repos?.length > 1 ? (
-                    <div className={styles.dropdown}>
+                    <>
                       <button
+                        ref={el => {
+                          (buttonRefs.current[project.id] = el)
+                        }}
                         className={styles.dropdownButton}
-                        onClick={() => setOpenDropdownId(openDropdownId === project.id ? null : project.id)}
+                        onMouseDown={(e) => handleDropdownToggle(project.id, e)}
                       >
                         <ExternalLink size={20} />
                         <span>Repositorios</span>
                       </button>
-                      {openDropdownId === project.id && (
+                      <DropdownMenuPortal
+                        open={openDropdownId === project.id}
+                        anchorRect={anchorRect}
+                        onClose={() => setOpenDropdownId(null)}
+                      >
                         <ul className={styles.dropdownMenu}>
                           {project.links.repos.map((repo, index) => (
                             <li key={index}>
@@ -155,8 +182,8 @@ const Projects = () => {
                             </li>
                           ))}
                         </ul>
-                      )}
-                    </div>
+                      </DropdownMenuPortal>
+                    </>
                   ) : null}
                 </div>
               </div>
