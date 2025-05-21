@@ -16,7 +16,7 @@ const projectsData = [
       live: 'https://front-app-restaurant.vercel.app',
       repos: [
         { name: 'Repositorio del Front', url: 'https://github.com/jesusdavid24/front-app-restaurant' },
-        { name: 'Repositorio del Back', url: 'https://github.com/jesusdavid24/front-app-restaurant' },
+        { name: 'Repositorio del Back', url: 'https://github.com/Cristianjs93/back-app-restaurant' },
       ]
     },
   },
