@@ -13,7 +13,13 @@ const Footer = () => {
           </p>
           
           <p className={styles.made}>
-            Hecho con <Flame size={16} className={styles.icon} /> usando React & Next.js
+            Hecho con <Flame size={16} className={styles.icon} /> usando React & Next.js. Link del repositorio:
+            <a href='https://github.com/r0odr1/portfolio-r0odri'
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.repoLink}
+            >
+              Portafolio</a>
           </p>
         </div>
       </div>
