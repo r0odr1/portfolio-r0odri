@@ -33,6 +33,17 @@
   animation: flicker 1.2s infinite ease-in-out;
 }
 
+.repoLink {
+  color: #4fc3f7; /* Puedes ajustar este color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.repoLink:hover {
+  color: var(--acent-color); /* Color al pasar el cursor */
+  text-decoration: underline;
+}
+
 @keyframes flicker {
   0%,
   100% {
