@@ -141,6 +141,10 @@
   z-index: 1000;
 }
 
+.dropdown a:hover {
+  color: var(--accent-color);
+}
+
 .dropdownButton {
   background: none;
   border: none;
@@ -158,23 +162,19 @@
   margin-left: 0.5rem;
   margin-top: 0;
   background: var(--primary-color);
+  color: var(--text-color);
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.5rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1100;
   min-width: 200px;
-  color: var(--text-color);
 }
 
 .dropdownMenu li {
   list-style: none;
   padding: 0.5rem 1rem;
   z-index: 1100;
-}
-
-.dropdownMenu li:hover {
-  background-color: #f5f5f5;
 }
 
 .dropdownMenu a {
