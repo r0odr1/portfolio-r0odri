@@ -17,11 +17,6 @@ const About = () => {
             Actualmente, me enfoco en mejorar mis habilidades mediante proyectos prácticos, explorando nuevos frameworks y profundizando en el diseño responsivo
             y código limpio. Valoro el trabajo en equipo y la comunicación efectiva, y siempre busco colaborar para resolver desafíos complejos.
             </p>
-          <img
-            src="/assets/images/Logo.png"
-            alt="Logo"
-            className={styles.bioLogo}
-          />
           </div>
 
           
