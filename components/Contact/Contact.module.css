@@ -150,6 +150,12 @@
   cursor: pointer;
 }
 
+.tooltipTrigger {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .tooltip {
   display: none;
   position: absolute;
@@ -167,6 +173,10 @@
   width: 250px; /* Ancho fijo para el tooltip */
   /* text-align: justify; Alinea el texto para que se vea limpio */
   z-index: 10; /* Asegura que se muestre encima de otros elementos */
+}
+
+.tooltipTrigger:hover .tooltip {
+    display: block;
 }
 
 .formStatus:hover .tooltip {

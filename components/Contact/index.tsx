@@ -1,7 +1,7 @@
 'use client';
 
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
 
 const Contact = () => {
@@ -24,27 +24,38 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError('');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      // Reset success message after 5 seconds
+
+      try {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+          });
+
+          const data = await response.json();
+
+          if (data.success) {
+              setSubmitSuccess(true);
+              setFormData({ name: '', email: '', subject: '', message: '' });
+              setTimeout(() => setSubmitSuccess(false), 5000);
+          } else {
+              setSubmitError(data.message);
+          }
+      } catch (error) {
+          setSubmitError('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+      } finally {
+          setIsSubmitting(false);
+      }
+
       setTimeout(() => {
-        setSubmitSuccess(false);
+          setSubmitSuccess(false);
       }, 5000);
-    }, 1500);
   };
   
   return (
@@ -107,15 +118,12 @@ const Contact = () => {
           
           <div className={styles.contactForm}>
             <div className={styles.formHeader}>
-              <span className={styles.formStatus}>
-                Trabajando en el formulario
-                <div className={styles.tooltip}>
-                  Este formulario está en desarrollo: Por ahora, solo simula el envío de mensajes y no se envían correos reales.
-                  <br />
-                  Sin embargo, puedes contactarme usando la información que aparece a la izquierda.
-                </div>
-              </span>
-              <h3>Envíame un mensaje</h3>
+              <h3 className={styles.tooltipTrigger}>
+                Envíame un mensaje
+                <span className={styles.tooltip}>
+                  Tu mensaje se enviará directamente a mi correo. ¡Te responderé lo antes posible!
+                </span>
+              </h3>
             </div>
             
             {submitSuccess && (
