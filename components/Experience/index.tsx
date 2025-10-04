@@ -3,7 +3,26 @@ import styles from './Experience.module.css';
 
 const experienceData = [
   {
-    id: 1,
+    id: 6,
+    title: 'Desarrollador Junior',
+    company: 'GSE - Easysoft.',
+    location: 'Ecuador - Remoto',
+    period: 'Jun 2025 - Actualmente',
+    description: 'Encargado del análisis, diseño, desarrollo e implementación de sistemas de información, aplicando metodologías ágiles, pruebas unitarias y buenas prácticas de arquitectura para garantizar soluciones robustas y escalables.',
+    responsibilities: [
+      'Analizo, diseño e implemento sistemas de información de acuerdo con los requerimientos del cliente',
+      'Desarrollo aplicaciones en lenguajes y frameworks como C#, Java, Angular y .NET Core',
+      'Trabajo con bases de datos relacionales y no relacionales (SQL Server, MongoDB, DynamoDB)',
+      'Diseño arquitecturas de software y hardware ajustadas a los estándares de la compañía',
+      'Aseguro la integración y despliegue de aplicaciones en entornos de producción',
+      'Administro y versiono código mediante TFS y GitLab',
+      'Colaboro en un entorno ágil Scrum, participando en reuniones de planificación y seguimiento',
+      'Reviso diseños en Figma y los implemento en código asegurando la fidelidad visual y funcional',
+      'Velo por la seguridad de la información, cumplimiento de normativas y mejora continua',
+    ],
+  },
+  {
+    id: 5,
     title: 'Desarrollador Informatico',
     company: 'ClavisCo.',
     location: 'Costa Rica - Remoto',
@@ -25,7 +44,7 @@ const experienceData = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: 'Desarrollador FullStack',
     company: 'Make It Real',
     location: 'Bogotá, Colombia - Remoto',
@@ -57,7 +76,7 @@ const experienceData = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     title: 'Practicante Analista de Soporte',
     company: 'PepsiCo Alimentos S.A.',
     location: 'Bogotá, Colombia',
@@ -73,7 +92,7 @@ const experienceData = [
     ],
   },
   {
-    id: 5,
+    id: 1,
     title: 'Auxiliar Operativo Verificador de Garantias',
     company: 'Banco de Bogotá',
     location: 'Bogotá, Colombia',

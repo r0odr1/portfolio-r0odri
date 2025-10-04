@@ -137,6 +137,18 @@ const About = () => {
                 <span>GitHub</span>
               </div>
               <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" alt="GitLab"/>
+                <span>GitLab</span>
+              </div>
+              <div className={styles.tech}>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg" alt="Storybook"/>
+                <span>Storybook</span>
+              </div>
+              <div className={styles.tech}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma"/>
+                  <span>Figma</span>
+              </div>  
+              <div className={styles.tech}>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/karma/karma-original.svg" alt='Karma'/>
                 <span>Karma</span>
               </div>

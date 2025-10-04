@@ -39,4 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.idea
+
+# Archivos de JetBrains (.idea)
+.idea/
+*.iml
