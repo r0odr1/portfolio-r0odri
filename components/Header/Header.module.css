@@ -169,3 +169,21 @@
     font-size: var(--font-size-xl);
   }
 }
+
+/* Estilo base para los enlaces de navegación */
+.navLink {
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
+
+/* Estilo para el enlace de la sección activa */
+.navLinkActive {
+  composes: navLink; /* Hereda los estilos de .navLink */
+  color: var(--accent-color);
+  font-weight: 700;
+  border-bottom-color: var(--accent-color);
+}
