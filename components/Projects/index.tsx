@@ -94,7 +94,7 @@ const Projects = () => {
   const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
   const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
   
-  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js'];
+  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js', 'TypeScript'];
   
   const filteredProjects = filter === 'All'
     ? projectsData
