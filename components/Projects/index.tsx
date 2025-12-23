@@ -61,6 +61,19 @@ const projectsData = [
   },
   {
     id: 5,
+    title: 'Tienda de Guitarras',
+    description: 'Tienda de Guitarras es una tienda en línea para la compra de guitarras. La aplicación permite agregar productos al carrito de compras, modificar cantidades, eliminar ítems individuales o vaciar el carrito completo.\n\nEl carrito se gestiona de forma dinámica con JavaScript y los productos se almacenan en localStorage, garantizando que la información se mantenga incluso al recargar la página. Además, cuenta con un diseño responsive para una experiencia óptima en cualquier dispositivo.',
+    image: '/assets/images/guitarras.jpg',
+    tags: ['Html', 'Css', 'JavaScript', 'React'],
+    links: {
+      live: 'https://siteguitars.netlify.app/',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/guitarras'},
+      ]
+    },
+  },
+  {
+    id: 6,
     title: 'Bienes Raíces',
     description: 'Bienes Raíces es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
     image: '/assets/images/bienesraices.png',
