@@ -1,6 +1,7 @@
 'use client';
 
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 import DropdownMenuPortal from './DropdownMenuPortal';
 import styles from './Projects.module.css';
@@ -136,13 +137,19 @@ const Projects = () => {
         </div>
         
         <div className={styles.projectGrid}>
-          {filteredProjects.map(project => (
+          {filteredProjects.map((project, idx) => (
             <div key={project.id} className={styles.projectCard}>
               <div className={styles.projectImage}>
                 {project.status && (
                   <span className={styles.projectLabel}>{project.status}</span>
                 )}
-                <img src={project.image} alt={project.title} />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className={styles.projectImg}
+                  priority={idx < 2}  />
               </div>
               <div className={styles.projectContent}>
                 <h3>{project.title}</h3>

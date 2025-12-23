@@ -1,7 +1,6 @@
 .projects {
   padding: var(--spacing-16) 0;
   background-color: var(--primary-color);
-  position: relative; /* importante si hay hijos con posición absoluta */
   overflow: visible;
 }
 
@@ -44,7 +43,7 @@
   position: relative;
   background-color: var(--card-background);
   border-radius: var(--border-radius);
-  overflow: visible;
+  overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -56,18 +55,16 @@
 
 .projectImage {
   position: relative;
-  height: 200px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-}
-
-.projectImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.projectCard:hover .projectImage img {
+.projectImg {
+  object-fit: cover;
+}
+
+.projectCard:hover .projectImage {
   transform: scale(1.1);
 }
 
@@ -98,6 +95,7 @@
   border-radius: 4px;
   font-size: var(--font-size-sm);
   font-weight: bold;
+  z-index: 2;
 }
 
 .tags {
