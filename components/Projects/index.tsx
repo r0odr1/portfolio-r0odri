@@ -65,7 +65,7 @@ const projectsData = [
     title: 'Tienda de Guitarras',
     description: 'Tienda de Guitarras es una tienda en línea para la compra de guitarras. La aplicación permite agregar productos al carrito de compras, modificar cantidades, eliminar ítems individuales o vaciar el carrito completo.\n\nEl carrito se gestiona de forma dinámica con JavaScript y los productos se almacenan en localStorage, garantizando que la información se mantenga incluso al recargar la página. Además, cuenta con un diseño responsive para una experiencia óptima en cualquier dispositivo.',
     image: '/assets/images/guitarras.jpg',
-    tags: ['Html', 'Css', 'React', 'TypeScript'],
+    tags: ['Html', 'Tailwind CSS', 'React', 'TypeScript'],
     links: {
       live: 'https://siteguitarts.netlify.app',
       repos: [
@@ -75,6 +75,32 @@ const projectsData = [
   },
   {
     id: 6,
+    title: 'Contador de Calorias',
+    description: 'Contador de Calorías es una aplicación web que permite registrar y controlar la ingesta diaria de alimentos, así como las calorías consumidas y quemadas. El usuario puede agregar, editar y eliminar registros de manera dinámica.\n\nLa aplicación calcula automáticamente el total de calorías y el balance restante, ofreciendo una visión clara del progreso diario. La información se gestiona con JavaScript y se persiste utilizando localStorage, asegurando que los datos no se pierdan al recargar la página. Además, cuenta con un diseño responsive para una experiencia fluida en cualquier dispositivo.',
+    image: '/assets/images/calories.png',
+    tags: ['Html', 'Tailwind CSS', 'React', 'TypeScript'],
+    links: {
+      live: 'https://trackercalorie.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/tipcalculator_reducer'},
+      ]
+    },
+  },
+  {
+    id: 7,
+    title: 'Planificador de Gastos',
+    description: 'Planificador de Gastos es una aplicación web diseñada para ayudar a los usuarios a organizar y controlar sus finanzas personales. Permite registrar ingresos y gastos, asignarlos a diferentes categorías y establecer un presupuesto mensual.\n\nLa aplicación calcula automáticamente el total disponible, los gastos acumulados y el balance restante en tiempo real. Toda la información se gestiona con JavaScript y se almacena en localStorage, asegurando que los datos se conserven incluso al recargar la página. Además, cuenta con un diseño responsive que facilita su uso en cualquier dispositivo.',
+    image: '/assets/images/planificadorGastos.png',
+    tags: ['Html', 'Tailwind CSS', 'React', 'TypeScript', 'ContextAPI'],
+    links: {
+      live: 'https://trackgastos.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/control_gastos_contextapi'},
+      ]
+    },
+  },
+  {
+    id: 8,
     title: 'Bienes Raíces',
     description: 'Bienes Raíces es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
     image: '/assets/images/bienesraices.png',
@@ -94,7 +120,7 @@ const Projects = () => {
   const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
   const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
   
-  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js', 'TypeScript'];
+  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js', 'TypeScript' ];
   
   const filteredProjects = filter === 'All'
     ? projectsData
