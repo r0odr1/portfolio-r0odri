@@ -40,6 +40,8 @@
 }
 
 .projectCard {
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-color: var(--card-background);
   border-radius: var(--border-radius);
@@ -54,6 +56,7 @@
 }
 
 .projectImage {
+  flex-shrink: 0;
   position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -69,6 +72,9 @@
 }
 
 .projectContent {
+  flex: 1 1 auto;        /* ocupa el espacio restante */
+  display: flex;
+  flex-direction: column;
   padding: var(--spacing-6);
 }
 
@@ -98,6 +104,13 @@
   z-index: 2;
 }
 
+.bottomGroup {
+  margin-top: auto;   /* empuja todo el paquete abajo */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2); /* separación tags ↔ links */
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +118,7 @@
 }
 
 .links {
+  margin-top: auto;
   display: flex;
   gap: var(--spacing-4);
 }
