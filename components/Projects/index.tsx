@@ -23,6 +23,19 @@ const projectsData = [
   },
   {
     id: 2,
+    title: 'Cotizador de Criptomonedas',
+    description: 'Cotizador de Criptomonedas es una aplicación web que permite consultar en tiempo real el precio de distintas criptomonedas utilizando la API pública de CryptoCompare. La aplicación consume dos endpoints principales: uno para obtener el listado de criptomonedas más relevantes por capitalización de mercado y otro para consultar la cotización detallada según la criptomoneda y la moneda base seleccionada.\n\nEl proyecto está desarrollado con React y TypeScript, utilizando Zustand para el manejo del estado global y Zod para la validación segura de los datos recibidos desde la API. Las peticiones HTTP se realizan con Axios y el estado puede ser inspeccionado mediante Redux DevTools, facilitando la depuración durante el desarrollo. La interfaz es responsive y ofrece una experiencia clara e intuitiva.',
+    image: '/assets/images/CotizadorCriptomoneda.png',
+    tags: ['React', 'TypeScript', 'Css', 'Axios', 'Zustand', 'Zod', 'Redux DevTools'],
+    links: {
+      live: 'https://preciocripto.netlify.app',
+      repos: [
+        { name: 'Repositorio', url: 'https://github.com/r0odr1/criptoApp' },
+      ]
+    },
+  },
+  {
+    id: 3,
     title: 'Buscador del Clima',
     description: 'Aplicación web que muestra el clima actual y el forecast de los próximos 5 días para cualquier ciudad del mundo.\n\n' +
     'Consume la API de OpenWeather para obtener datos en tiempo real y los presenta con iconos animados, gradientes dinámicos según la temperatura y cambio automático de unidades °C.\n\n' +
@@ -33,19 +46,6 @@ const projectsData = [
       live: 'https://climario.netlify.app',
       repos: [
         { name: 'Repositorio', url: 'https://github.com/r0odr1/buscador-de-clima' },
-      ]
-    },
-  },
-  {
-    id: 3,
-    title: 'Cotizador de Criptomonedas',
-    description: 'Cotizador de Criptomonedas es una aplicación web que permite consultar en tiempo real el precio de distintas criptomonedas utilizando la API pública de CryptoCompare. La aplicación consume dos endpoints principales: uno para obtener el listado de criptomonedas más relevantes por capitalización de mercado y otro para consultar la cotización detallada según la criptomoneda y la moneda base seleccionada.\n\nEl proyecto está desarrollado con React y TypeScript, utilizando Zustand para el manejo del estado global y Zod para la validación segura de los datos recibidos desde la API. Las peticiones HTTP se realizan con Axios y el estado puede ser inspeccionado mediante Redux DevTools, facilitando la depuración durante el desarrollo. La interfaz es responsive y ofrece una experiencia clara e intuitiva.',
-    image: '/assets/images/CotizadorCriptomoneda.png',
-    tags: ['React', 'TypeScript', 'Css', 'Axios', 'Zustand', 'Zod', 'Redux DevTools'],
-    links: {
-      live: 'https://preciocripto.netlify.app',
-      repos: [
-        { name: 'Repositorio', url: 'https://github.com/r0odr1/criptoApp' },
       ]
     },
   },
@@ -88,34 +88,21 @@ const projectsData = [
       ]
     },
   },
-  {
+    {
     id: 7,
-    title: 'Blog Café',
-    description: 'Blog Café es un blog dedicado al mundo del café, con contenido sobre variedades, preparación y curiosidades. Su diseño visual atractivo facilita la lectura y la navegación. \n\nOfrece una experiencia de usuario fluida y cuenta con diseño responsive, lo que permite acceder desde cualquier dispositivo sin perder calidad ni funcionalidad.',
-    image: '/assets/images/blogcafe.png',
-    tags: ['Html', 'Css', 'JavaScript'],
+    title: 'Tienda de Guitarras',
+    description: 'Tienda de Guitarras es una tienda en línea para la compra de guitarras. La aplicación permite agregar productos al carrito de compras, modificar cantidades, eliminar ítems individuales o vaciar el carrito completo.\n\nEl carrito se gestiona de forma dinámica con JavaScript y los productos se almacenan en localStorage, garantizando que la información se mantenga incluso al recargar la página. Además, cuenta con un diseño responsive para una experiencia óptima en cualquier dispositivo.',
+    image: '/assets/images/guitarras.jpg',
+    tags: ['Html', 'Tailwind CSS', 'React', 'TypeScript'],
     links: {
-      live: 'https://cafebloog.netlify.app',
+      live: 'https://siteguitarts.netlify.app',
       repos: [
-        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog'}
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/guitarras-ts'},
       ]
     },
   },
   {
     id: 8,
-    title: 'Frontend Store',
-    description: 'Frontend Store es una tienda en línea que ofrece una experiencia de compra moderna y accesible. Con una interfaz limpia y navegación sencilla, permite a los usuarios explorar y adquirir productos de manera eficiente. \n\nEl sitio está diseñado para adaptarse a cualquier dispositivo, gracias a su diseño responsive, lo que garantiza una experiencia fluida y consistente en móviles, tabletas y computadoras.',
-    image: '/assets/images/frontendstore.png',
-    tags: ['Html', 'Css', 'JavaScript'],
-    links: {
-      live: 'https://fro-store.netlify.app',
-      repos: [
-        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog',}
-      ],
-    },
-  },
-  {
-    id: 9,
     title: 'Festival de Música',
     description: 'Festival de Música es una aplicación web que muestra información sobre festivales y artistas destacados. Su diseño atractivo y navegación simple facilitan la exploración del contenido musical. \n\nEl sitio cuenta con diseño responsive, lo que asegura una experiencia fluida y consistente en móviles, tabletas y computadoras.',
     image: '/assets/images/festivalmusica.png',
@@ -128,15 +115,28 @@ const projectsData = [
     },
   },
   {
-    id: 10,
-    title: 'Tienda de Guitarras',
-    description: 'Tienda de Guitarras es una tienda en línea para la compra de guitarras. La aplicación permite agregar productos al carrito de compras, modificar cantidades, eliminar ítems individuales o vaciar el carrito completo.\n\nEl carrito se gestiona de forma dinámica con JavaScript y los productos se almacenan en localStorage, garantizando que la información se mantenga incluso al recargar la página. Además, cuenta con un diseño responsive para una experiencia óptima en cualquier dispositivo.',
-    image: '/assets/images/guitarras.jpg',
-    tags: ['Html', 'Tailwind CSS', 'React', 'TypeScript'],
+    id: 9,
+    title: 'Frontend Store',
+    description: 'Frontend Store es una tienda en línea que ofrece una experiencia de compra moderna y accesible. Con una interfaz limpia y navegación sencilla, permite a los usuarios explorar y adquirir productos de manera eficiente. \n\nEl sitio está diseñado para adaptarse a cualquier dispositivo, gracias a su diseño responsive, lo que garantiza una experiencia fluida y consistente en móviles, tabletas y computadoras.',
+    image: '/assets/images/frontendstore.png',
+    tags: ['Html', 'Css', 'JavaScript'],
     links: {
-      live: 'https://siteguitarts.netlify.app',
+      live: 'https://fro-store.netlify.app',
       repos: [
-        {name: 'Repositorio', url: 'https://github.com/r0odr1/guitarras-ts'},
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog',}
+      ],
+    },
+  },
+  {
+    id: 10,
+    title: 'Blog Café',
+    description: 'Blog Café es un blog dedicado al mundo del café, con contenido sobre variedades, preparación y curiosidades. Su diseño visual atractivo facilita la lectura y la navegación. \n\nOfrece una experiencia de usuario fluida y cuenta con diseño responsive, lo que permite acceder desde cualquier dispositivo sin perder calidad ni funcionalidad.',
+    image: '/assets/images/blogcafe.png',
+    tags: ['Html', 'Css', 'JavaScript'],
+    links: {
+      live: 'https://cafebloog.netlify.app',
+      repos: [
+        {name: 'Repositorio', url: 'https://github.com/r0odr1/coffee-blog'}
       ]
     },
   },
