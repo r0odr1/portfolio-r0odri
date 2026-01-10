@@ -36,6 +36,19 @@ const projectsData = [
   },
   {
     id: 3,
+    title: 'Buscador de Cócteles',
+    description: 'Buscador de Cócteles con IA es una aplicación web que permite explorar y consultar recetas de bebidas y cócteles utilizando la API pública de TheCocktailDB. Los usuarios pueden buscar cócteles por nombre, categoría o ingredientes, obteniendo información detallada como instrucciones, ingredientes y medidas.\n\nAdemás, la aplicación incorpora una sección especial que permite generar bebidas y cócteles mediante Inteligencia Artificial, ofreciendo combinaciones y recetas personalizadas. El proyecto está desarrollado con React y utiliza React Router para la navegación entre vistas, junto con Axios para el consumo de la API. La interfaz es moderna, responsive y está enfocada en una experiencia de usuario fluida e intuitiva.',
+    image: '/assets/images/BuscadorCocteles.png',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Axios', 'Zustand', 'Zod', 'Redux DevTools', 'IA'],
+    links: {
+      live: 'https://drinksai.netlify.app',
+      repos: [
+        { name: 'Repositorio', url: 'https://github.com/r0odr1/buscador-de-bebidas' },
+      ]
+    },
+  },
+  {
+    id: 4,
     title: 'Buscador del Clima',
     description: 'Aplicación web que muestra el clima actual y el forecast de los próximos 5 días para cualquier ciudad del mundo.\n\n' +
     'Consume la API de OpenWeather para obtener datos en tiempo real y los presenta con iconos animados, gradientes dinámicos según la temperatura y cambio automático de unidades °C.\n\n' +
@@ -50,7 +63,7 @@ const projectsData = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: 'Contador de Calorias',
     description: 'Contador de Calorías es una aplicación web que permite registrar y controlar la ingesta diaria de alimentos, así como las calorías consumidas y quemadas. El usuario puede agregar, editar y eliminar registros de manera dinámica.\n\nLa aplicación calcula automáticamente el total de calorías y el balance restante, ofreciendo una visión clara del progreso diario. La información se gestiona con JavaScript y se persiste utilizando localStorage, asegurando que los datos no se pierdan al recargar la página. Además, cuenta con un diseño responsive para una experiencia fluida en cualquier dispositivo.',
     image: '/assets/images/calories.png',
@@ -63,7 +76,7 @@ const projectsData = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: 'Planificador de Gastos',
     description: 'Planificador de Gastos es una aplicación web diseñada para ayudar a los usuarios a organizar y controlar sus finanzas personales. Permite registrar ingresos y gastos, asignarlos a diferentes categorías y establecer un presupuesto mensual.\n\nLa aplicación calcula automáticamente el total disponible, los gastos acumulados y el balance restante en tiempo real. Toda la información se gestiona con JavaScript y se almacena en localStorage, asegurando que los datos se conserven incluso al recargar la página. Además, cuenta con un diseño responsive que facilita su uso en cualquier dispositivo.',
     image: '/assets/images/planificadorGastos.png',
@@ -76,7 +89,7 @@ const projectsData = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: 'Seguimiento de Pacientes',
     description: 'Seguimiento de Pacientes es una aplicación web desarrollada para la gestión de pacientes en una veterinaria. Permite registrar, visualizar, editar y eliminar información de pacientes, incluyendo datos del propietario, fecha de alta y síntomas.\n\nLa aplicación está construida con React y TypeScript, utilizando Zustand para el manejo del estado global. Los datos se persisten mediante localStorage, garantizando que la información no se pierda al recargar la página. Además, cuenta con una interfaz moderna y responsive desarrollada con Tailwind CSS, enfocada en una experiencia de usuario clara e intuitiva.',
     image: '/assets/images/AdministradorPacientes.png',
@@ -89,7 +102,7 @@ const projectsData = [
     },
   },
     {
-    id: 7,
+    id: 8,
     title: 'Tienda de Guitarras',
     description: 'Tienda de Guitarras es una tienda en línea para la compra de guitarras. La aplicación permite agregar productos al carrito de compras, modificar cantidades, eliminar ítems individuales o vaciar el carrito completo.\n\nEl carrito se gestiona de forma dinámica con JavaScript y los productos se almacenan en localStorage, garantizando que la información se mantenga incluso al recargar la página. Además, cuenta con un diseño responsive para una experiencia óptima en cualquier dispositivo.',
     image: '/assets/images/guitarras.jpg',
@@ -102,7 +115,7 @@ const projectsData = [
     },
   },
   {
-    id: 8,
+    id: 9,
     title: 'Festival de Música',
     description: 'Festival de Música es una aplicación web que muestra información sobre festivales y artistas destacados. Su diseño atractivo y navegación simple facilitan la exploración del contenido musical. \n\nEl sitio cuenta con diseño responsive, lo que asegura una experiencia fluida y consistente en móviles, tabletas y computadoras.',
     image: '/assets/images/festivalmusica.png',
@@ -115,7 +128,7 @@ const projectsData = [
     },
   },
   {
-    id: 9,
+    id: 10,
     title: 'Frontend Store',
     description: 'Frontend Store es una tienda en línea que ofrece una experiencia de compra moderna y accesible. Con una interfaz limpia y navegación sencilla, permite a los usuarios explorar y adquirir productos de manera eficiente. \n\nEl sitio está diseñado para adaptarse a cualquier dispositivo, gracias a su diseño responsive, lo que garantiza una experiencia fluida y consistente en móviles, tabletas y computadoras.',
     image: '/assets/images/frontendstore.png',
@@ -128,7 +141,7 @@ const projectsData = [
     },
   },
   {
-    id: 10,
+    id: 11,
     title: 'Blog Café',
     description: 'Blog Café es un blog dedicado al mundo del café, con contenido sobre variedades, preparación y curiosidades. Su diseño visual atractivo facilita la lectura y la navegación. \n\nOfrece una experiencia de usuario fluida y cuenta con diseño responsive, lo que permite acceder desde cualquier dispositivo sin perder calidad ni funcionalidad.',
     image: '/assets/images/blogcafe.png',
@@ -141,7 +154,7 @@ const projectsData = [
     },
   },
   {
-    id: 11,
+    id: 12,
     title: 'Bienes Raíces',
     description: 'Bienes Raíces es una plataforma en línea para la compra, venta y alquiler de propiedades, con una amplia variedad de inmuebles y fotos de alta calidad para facilitar la toma de decisiones. \n\nEl sitio cuenta con filtros de búsqueda avanzados y diseño responsive, lo que asegura una experiencia fluida en cualquier dispositivo.',
     image: '/assets/images/bienesraices.png',
@@ -160,9 +173,9 @@ const Projects = () => {
   const [filter, setFilter] = useState('All');
   const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
   const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
-  
-  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js', 'TypeScript' ];
-  
+
+  const categories = ['All', 'React', 'JavaScript', 'Node.js', 'Next.js', 'TypeScript', 'IA' ];
+
   const filteredProjects = filter === 'All'
     ? projectsData
     : projectsData.filter(project => project.tags.includes(filter));
@@ -189,7 +202,7 @@ const Projects = () => {
     <section id="projects" className={styles.projects}>
       <div className="container">
         <h2 className="section-title">My Projects</h2>
-        
+
         <div className={styles.filters}>
           {categories.map(category => (
             <button
@@ -201,7 +214,7 @@ const Projects = () => {
             </button>
           ))}
         </div>
-        
+
         <div className={styles.projectGrid}>
           {filteredProjects.map((project, idx) => (
             <div key={project.id} className={styles.projectCard}>
