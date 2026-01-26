@@ -201,7 +201,7 @@ const Projects = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className="container">
-        <h2 className="section-title">Mis proyectos</h2>
+        <h2 className="section-title">Mis Proyectos</h2>
 
         <div className={styles.filters}>
           {categories.map(category => (
