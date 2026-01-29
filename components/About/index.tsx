@@ -242,6 +242,14 @@ const About = () => {
               </div>
               <div className={styles.tech}>
                 <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" alt="Jest"
+                  width={24}
+                  height={24}
+                />
+                <span>Jest</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original.svg" alt='Bitbucket'
                   width={24}
                   height={24}
