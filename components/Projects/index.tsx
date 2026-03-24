@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRef, useState } from 'react';
 import DropdownMenuPortal from './DropdownMenuPortal';
 import styles from './Projects.module.css';
+import { TechnologyTag } from './technologyIcons';
 
 const projectsData = [
   {
@@ -264,7 +265,7 @@ const Projects = () => {
                 <div className={styles.bottomGroup}>
                   <div className={styles.tags}>
                     {project.tags.map(tag => (
-                      <span key={tag} className="tag">{tag}</span>
+                      <TechnologyTag key={tag} tech={tag} />
                     ))}
                   </div>
                   <div className={styles.links}>

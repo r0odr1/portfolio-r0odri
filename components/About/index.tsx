@@ -160,6 +160,14 @@ const About = () => {
               </div>
               <div className={styles.tech}>
                 <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt='Tailwind CSS'
+                  width={24}
+                  height={24}
+                />
+                <span>Tailwind CSS</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gulp/gulp-plain.svg" alt='Gulp'
                   width={24}
                   height={24}
@@ -176,11 +184,53 @@ const About = () => {
               </div>
               <div className={styles.tech}>
                 <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original.svg" alt='Sequelize'
+                  width={24}
+                  height={24}
+                />
+                <span>Sequelize</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg" alt="Ionic"
                   width={24}
                   height={24}
                 />
                 <span>Ionic</span>
+              </div>
+
+              {/* Estado, Validación y HTTP */}
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg" alt='Axios'
+                  width={24}
+                  height={24}
+                />
+                <span>Axios</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" alt='Redux DevTools'
+                  width={24}
+                  height={24}
+                />
+                <span>Redux DevTools</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" alt='Zustand'
+                  width={24}
+                  height={24}
+                />
+                <span>Zustand</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt='Zod'
+                  width={24}
+                  height={24}
+                />
+                <span>Zod</span>
               </div>
 
               {/* Herramientas y Plataformas */}
@@ -191,6 +241,14 @@ const About = () => {
                   height={24}
                 />
                 <span>Node.js</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express"
+                  width={24}
+                  height={24}
+                />
+                <span>Express</span>
               </div>
               <div className={styles.tech}>
                 <Image
@@ -291,6 +349,22 @@ const About = () => {
               </div>
 
               {/* Bases de Datos */}
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                  width={24}
+                  height={24}
+                />
+                <span>MongoDB</span>
+              </div>
+              <div className={styles.tech}>
+                <Image
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongoose/mongoose-original.svg" alt="Mongoose"
+                  width={24}
+                  height={24}
+                />
+                <span>Mongoose</span>
+              </div>
               <div className={styles.tech}>
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server"
